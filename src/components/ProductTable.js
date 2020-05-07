@@ -32,8 +32,8 @@ function ProductTable({ products }) {
   }, {});
 
   return (
-    <div className="table">
-      <table className="table">
+    <div className="tableDiv">
+      <table className="table is-hoverable is-fullwidth">
         <thead>
           <tr>
             <th>Name</th>

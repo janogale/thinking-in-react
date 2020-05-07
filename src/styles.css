@@ -1,9 +1,17 @@
+body {
+  background: #151515;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  color: #fff;
+  position: relative;
+}
 .App {
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .products {
@@ -11,10 +19,24 @@
   border: 1px solid rgb(185, 204, 185);
   padding: 20px 40px;
   border-radius: 10px;
+  background: #f9f9f9;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .App h1 {
   font-weight: bolder;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.7rem;
+  color: #aaa;
+  padding-bottom: 1rem;
+  z-index: 0;
 }
