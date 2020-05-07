@@ -1,27 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-function SearchBar({ products, filterData }) {
-  let [value, setValue] = useState("");
-
-
-
-  const handleChange = (e) =>{
-    console.log(value)
-    setValue(e.target.value)
-    console.log(value)
-  }
-
+function SearchBar({ products, filterData, handleSearch }) {
   return (
     <div className="searchbar">
       <form>
         <input
-         type="text"
+          type="text"
           placeholder="search..."
-           value={value}
-           onChange={e => handleChange(e)}
-            />
-         <p>
-          <input type="checkbox" onClick={e=>filterData(e.target.checked)}/>
+          onChange={e => handleSearch(e.target.value)}
+        />
+        <p>
+          <input type="checkbox" onClick={e => filterData(e.target.checked)} />
           Only show products in Stock
         </p>
       </form>

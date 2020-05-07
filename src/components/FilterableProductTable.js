@@ -16,8 +16,17 @@ function FilterableProductTable() {
       let filtered = products.filter(p => p.stocked);
       setProducts(filtered);
     } else {
-      console.log(products)
-      console.log(productsData)
+      setProducts(productsData);
+    }
+  };
+
+  const handleSearch = v => {
+    if (v) {
+      v = v.toLowerCase();
+      let found = products.filter(p => p.name.toLowerCase().includes(v));
+
+      setProducts(found);
+    } else {
       setProducts(productsData);
     }
   };
@@ -25,7 +34,7 @@ function FilterableProductTable() {
   return (
     <div className="products">
       <h2>Products</h2>
-      <SearchBar filterData={filterData} />
+      <SearchBar filterData={filterData} handleSearch={handleSearch} />
       <ProductTable products={products} />
     </div>
   );
