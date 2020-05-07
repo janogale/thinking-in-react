@@ -33,7 +33,6 @@ function FilterableProductTable() {
 
   return (
     <div className="products">
-      <h2>Products</h2>
       <SearchBar filterData={filterData} handleSearch={handleSearch} />
       <ProductTable products={products} />
     </div>

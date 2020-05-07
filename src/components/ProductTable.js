@@ -21,7 +21,7 @@ function ProductTable({ products }) {
   // display sorted data
   products.reduce((acc, p, index) => {
     if (p.category in acc) {
-      rows.push(<ProductRow product={p} key={p.name}/>);
+      rows.push(<ProductRow product={p} key={p.name} />);
     } else {
       rows.push(<ProductCategoryRow cat={p.category} key={p.category} />);
       rows.push(<ProductRow product={p} key={p.name} />);
@@ -33,7 +33,7 @@ function ProductTable({ products }) {
 
   return (
     <div className="table">
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Name</th>

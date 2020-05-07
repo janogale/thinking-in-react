@@ -4,7 +4,7 @@ import React from "react";
 
 function ProductCategoryRow({  cat }) {
   return (
-    <tr style={{background: '#ddd', fontWeight: 'bolder'}}>
+    <tr style={{background: '#eee', fontWeight: 'bolder'}}>
       <td colSpan="2">{cat}</td>
     </tr>
   );
